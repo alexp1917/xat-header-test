@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/test-header', (r, s, n) => {
-  s.send('you sent header ' +
-    r.get('x_access_token'));
+  s.send('you sent header \'' +
+    r.get('x_access_token') + '\'');
 });
 
 module.exports = router;
